@@ -1,4 +1,4 @@
-//20212663 ±Ë¿Á∞Ê
+//20212663 ÍπÄÏû¨Í≤Ω
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>  // Consider adding string.h for strcmp
@@ -845,7 +845,7 @@ void statement_s() // statement_s -> <statement> | <statement> <semicolon> <stat
         statement_s();
 
     }
-    else if (next_token == LINE_CHANGE || next_token == EOF) //¿Ã ¡Ÿ¿∫ ≥°
+    else if (next_token == LINE_CHANGE || next_token == EOF) //Ïù¥ Ï§ÑÏùÄ ÎÅù
     {
 
     }
@@ -911,7 +911,7 @@ char* expression() //<expression>-><term><term_tail>
 
     return exp_result;
 }
-char* term_tail(char* term_result) //<term_tail> °Ê <add_op><term><term_tail> | E  
+char* term_tail(char* term_result) //<term_tail> ‚Üí <add_op><term><term_tail> | E  
 //take care of +/-
 {
     char term_tail_result[50];
@@ -1166,7 +1166,7 @@ void lexical()//read line, analyze it, find one lexeme
             const_num++;
         }
         //const_num++;
-    }  //\0¿∏∑Œ ¥Ÿ ¥Î√ºµ ??
+    }  //\0ÏúºÎ°ú Îã§ ÎåÄÏ≤¥Îê®??
     else if (now == ':')
     {
         token_string[token_index] = ':';
@@ -1185,7 +1185,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = A_OP;
         if (is_v == true)
         {
-            char aop[20] = "assignment operator";
+            char aop[20] = "assignment_op";
             printToken(aop);
         }
     }
@@ -1210,7 +1210,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = ADD_OP;
         if (is_v == true)
         {
-            char addprinter[13] = "add operator";
+            char addprinter[13] = "add_operator";
             printToken(addprinter);
         }
         if (initial_lex == true)
@@ -1239,7 +1239,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = ADD_OP;
         if (is_v == true)
         {
-            char addprinter[13] = "add operator";
+            char addprinter[13] = "add_operator";
             printToken(addprinter);
         }
         op_num++;
@@ -1268,7 +1268,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = MUL_OP;
         if (is_v == true)
         {
-            char multprinter[14] = "mult operator";
+            char multprinter[14] = "mult_operator";
             printToken(multprinter);
         }
         //op_num++;
@@ -1296,7 +1296,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = MUL_OP;
         if (is_v == true)
         {
-            char multprinter[14] = "mult operator";
+            char multprinter[14] = "mult_operator";
             printToken(multprinter);
         }
         //op_num++;
@@ -1322,7 +1322,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = A_OP;
         if (is_v == true)
         {
-            char aop[20] = "assignment operator";
+            char aop[20] = "assignment_op";
             printToken(aop);
         }
     }
@@ -1337,7 +1337,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = SEMI_COLON;
         if (is_v == true)
         {
-            char semiprint[11] = "semi colon";
+            char semiprint[11] = "semi_colon";
             printToken(semiprint);
         }
 
@@ -1350,7 +1350,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = L_PAR;
         if (is_v == true)
         {
-            char lpprint[11] = "left paren";
+            char lpprint[11] = "left_paren";
             printToken(lpprint);
         }
     }
@@ -1362,7 +1362,7 @@ void lexical()//read line, analyze it, find one lexeme
         next_token = R_PAR;
         if (is_v == true)
         {
-            char rpprint[12] = "right paren";
+            char rpprint[12] = "right_paren";
             printToken(rpprint);
         }
     }
