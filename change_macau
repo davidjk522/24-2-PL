@@ -4,7 +4,7 @@
 #include <string.h>  // Consider adding string.h for strcmp
 #include <cctype>
 #include<string>
-
+using namespace std;
 //make a lookup table
 #define IDENT 0  //identifier
 #define A_OP 1 //assign op
@@ -1020,7 +1020,7 @@ char* factor_tail(char* factor_result) //<mult_op> -> <factor><factor_tail> | E
             {
                 temp_result = atoi(falinfaltail) * atoi(factor_result);
                 string temptemp=to_string(temp_result);
-                strcpy(temp2,temptemp);
+                strcpy(temp2,temptemp.c_str());
                 //strcpy(temp2, _itoa(temp_result, falinfaltail, 10));
 
             }
@@ -1028,7 +1028,7 @@ char* factor_tail(char* factor_result) //<mult_op> -> <factor><factor_tail> | E
             {
                 temp_result = atoi(factor_result) / atoi(falinfaltail);
                 string temptemp=to_string(temp_result);
-                strcpy(temp2,temptemp);
+                strcpy(temp2,temptemp.c_str());
                // strcpy(temp2, _itoa(temp_result, falinfaltail, 10));
             }
         }
